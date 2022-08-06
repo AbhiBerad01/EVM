@@ -1,4 +1,5 @@
 var SmartContractABI = [
+
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
@@ -16,6 +17,19 @@ var SmartContractABI = [
 		],
 		"name": "eventVote",
 		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_candidateid",
+				"type": "uint256"
+			}
+		],
+		"name": "vote",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
 	},
 	{
 		"inputs": [],
@@ -62,19 +76,6 @@ var SmartContractABI = [
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_candidateid",
-				"type": "uint256"
-			}
-		],
-		"name": "vote",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "address",
 				"name": "",
 				"type": "address"
@@ -91,6 +92,7 @@ var SmartContractABI = [
 		"stateMutability": "view",
 		"type": "function"
 	}
+
 ];
 
-var SmartContractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
+var SmartContractAddress = "0xbA975b6010b4756d7fcd6B94bF33f6c054592e65";

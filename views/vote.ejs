@@ -185,6 +185,7 @@
       var IsMetamask = await CheckMetamaskConnection();
       if (IsMetamask) {
         myContract = await web3.eth.contract(SmartContractABI).at(SmartContractAddress);
+        console.log("Mycontract:",myContract);
         getCandidate(1);
         getCandidate(2);
 
@@ -211,6 +212,7 @@
 
     async function getCandidate(cad) {
       await myContract.candidates(cad, function (err, result) {
+        console.log(result);
         if (!err) {
           document.getElementById("cad" + cad).innerHTML = result[1];
           document.getElementById("cad" + cad + 'count').innerHTML = result[2].toNumber();
